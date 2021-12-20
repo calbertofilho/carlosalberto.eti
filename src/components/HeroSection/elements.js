@@ -35,7 +35,7 @@ export const VideoMovie = styled.video`
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: 100%;
+  height: calc(100% + 418px);
   padding: 0 30px;
   display: flex;
   justify-content: center;
