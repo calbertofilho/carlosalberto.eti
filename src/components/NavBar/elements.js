@@ -88,8 +88,10 @@ export const NavBarLink = styled(LinkScroll)`
   height: 100%;
   cursor: pointer;
 
-  &.hover {
+  &:hover {
     border-bottom: 3px solid #01bf71;
+    padding-top: 3px;
+    color: #01bf71;
   }
 `;
 
