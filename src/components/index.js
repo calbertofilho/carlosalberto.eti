@@ -1,4 +1,5 @@
-import SideBar from "./SideBar";
+import HeroSection from "./HeroSection";
 import NavBar from "./NavBar";
+import SideBar from "./SideBar";
 
-export { SideBar, NavBar }
+export { HeroSection, NavBar, SideBar };

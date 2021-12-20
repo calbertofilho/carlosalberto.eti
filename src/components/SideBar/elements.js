@@ -31,12 +31,10 @@ export const XIcon = styled(FaTimes)`
   color: #fff;
 `;
 
-// SidebarWrapper
 export const SideBarMenu = styled.div`
   color: #fff;
 `;
 
-// SidebarMenu
 export const SideBarItem = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
@@ -48,7 +46,6 @@ export const SideBarItem = styled.ul`
   }
 `;
 
-// SidebarLink
 export const SideBarLink = styled(LinkScroll)`
   display: flex;
   align-items: center;
@@ -66,13 +63,11 @@ export const SideBarLink = styled(LinkScroll)`
   }
 `;
 
-// SideBtnWrap
 export const SideBarButton = styled.div`
   display: flex;
   justify-content: center;
 `;
 
-// SidebarRoute
 export const SideBarButtonLink = styled(LinkRouter)`
   border-radius: 50px;
   background: #01bf71;
