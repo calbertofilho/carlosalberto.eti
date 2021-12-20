@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { Link as LinkRouter } from 'react-router-dom';
 import { Link as LinkScroll } from 'react-scroll';
 
-export const Container = styled.div``;
-
 export const Nav = styled.nav`
   background: #000;
   height: 80px;
@@ -32,7 +30,7 @@ export const NavBarContainer = styled.div`
 `;
 
 export const NavBarLogo = styled(LinkRouter)`
-  color: #fff;
+  color: #01bf71;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
@@ -105,6 +103,7 @@ export const NavBarButtonLink = styled(LinkRouter)`
   background: #01bf71;
   padding: 10px 22px;
   color: #010606; 
+  white-space: nowrap;
   font-size: 1rem;
   outline: none;
   border: none;
