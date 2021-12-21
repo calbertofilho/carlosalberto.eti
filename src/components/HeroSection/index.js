@@ -16,10 +16,14 @@ const HeroSection = () => {
       </Background>
       <Container>
         <Content>
-          <Heading>Carlos Alberto ETI</Heading>
-          <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel neque a erat placerat dictum sed vitae eros. Nullam tincidunt efficitur tortor, eget varius purus consequat id. Fusce sagittis lacus.</Paragraph>
+          <Heading>Carlos Alberto</Heading>
+          <Paragraph>
+            Cientista da computação, bacharelado e formado pela Universidade de Fortaleza UNIFOR em 2007.<br />
+            Freelancer experiente, atuando a { (new Date().getFullYear()) - 2007 } anos, na área de desenvolvimento de websites e softwares, e atualmente estudando desenvolvimento de jogos.<br />
+            Espero lhe ajudar com soluções digitais criativas, ágeis e personalizadas.
+          </Paragraph>
           <BtnWrapper>
-            <Button to='/' onMouseEnter={onHover} onMouseLeave={onHover}>Hire me { hover ? <ArrowForward /> : <ArrowRight /> }</Button>
+            <Button to='contact' onMouseEnter={onHover} onMouseLeave={onHover}>Contato { hover ? <ArrowForward /> : <ArrowRight /> }</Button>
           </BtnWrapper>
         </Content>
       </Container>
