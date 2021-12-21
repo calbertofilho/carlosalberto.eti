@@ -18,7 +18,7 @@ const HeroSection = () => {
         <Content>
           <Heading>Carlos Alberto</Heading>
           <Paragraph>
-            Cientista da computação, bacharelado e formado pela Universidade de Fortaleza UNIFOR em 2007.<br />
+            Cientista da computação, formado bacharel pela Universidade de Fortaleza - UNIFOR em 2007.<br />
             Freelancer experiente, atuando a { (new Date().getFullYear()) - 2007 } anos, na área de desenvolvimento de websites e softwares, e atualmente estudando desenvolvimento de jogos.<br />
             Espero lhe ajudar com soluções digitais criativas, ágeis, bonitas e personalizadas em seu projeto.
           </Paragraph>
