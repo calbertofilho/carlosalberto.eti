@@ -3,7 +3,7 @@ import { Section } from './elements'
 
 const PortfolioSection = () => {
   return (
-    <Section>
+    <Section id='portfolio'>
       
     </Section>
   )

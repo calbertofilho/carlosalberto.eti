@@ -3,7 +3,7 @@ import { Section } from './elements'
 
 const DownloadsSection = () => {
   return (
-    <Section>
+    <Section id='downloads'>
       
     </Section>
   )

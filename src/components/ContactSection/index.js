@@ -3,7 +3,7 @@ import { Section } from './elements'
 
 const ContactSection = () => {
   return (
-    <Section>
+    <Section id='contact'>
       
     </Section>
   )

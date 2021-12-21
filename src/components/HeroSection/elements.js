@@ -13,6 +13,10 @@ export const Section = styled.section`
   overflow: hidden;
   position: relative;
   z-index: 1;
+
+  @media (hover: none), (any-hover: hover) and (pointer: coarse) {
+    scroll-snap-align: none;
+  }
 `;
 
 export const Background = styled.div`
