@@ -10,7 +10,7 @@ const HeroSection = () => {
   };
 
   return (
-    <Section>
+    <Section id='home'>
       <Background>
         <VideoMovie type='video/mp4' src={Video} autoPlay loop muted />
       </Background>

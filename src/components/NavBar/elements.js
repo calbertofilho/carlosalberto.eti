@@ -29,7 +29,7 @@ export const NavBarContainer = styled.div`
   max-width: 1100px;
 `;
 
-export const NavBarLogo = styled(LinkRouter)`
+export const NavBarLogo = styled(LinkScroll)`
   color: #01bf71;
   justify-self: flex-start;
   cursor: pointer;

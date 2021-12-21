@@ -3,11 +3,14 @@ import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 import { Link as LinkScroll } from 'react-scroll';
 
 export const Section = styled.section`
-  background: #0c0c0c;
+	width: 100%;
+	height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+	box-sizing: border-box;
+  scroll-snap-align: center;
+  overflow: hidden;
   position: relative;
   z-index: 1;
 `;

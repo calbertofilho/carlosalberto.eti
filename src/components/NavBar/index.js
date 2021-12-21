@@ -6,7 +6,7 @@ const NavBar = ({ toggle }) => {
   return (
     <Nav>
       <NavBarContainer>
-        <NavBarLogo to="/">Carlos<br />Alberto <NavBarLogoEmphasis>ETI</NavBarLogoEmphasis></NavBarLogo>
+        <NavBarLogo to="home">Carlos<br />Alberto <NavBarLogoEmphasis>ETI</NavBarLogoEmphasis></NavBarLogo>
         <HamburgerIcon onClick={toggle}>
           <FaBars />
         </HamburgerIcon>
