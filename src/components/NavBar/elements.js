@@ -48,6 +48,14 @@ export const NavBarLogo = styled(LinkRouter)`
   }
 `;
 
+export const NavBarLogoEmphasis = styled.span`
+  align-self: flex-start;
+  font-family: 'Reality Hyper', sans-serif;
+  font-weight: bold;
+  font-size: 4.4rem;
+  margin-left: 12px;
+`;
+
 export const HamburgerIcon = styled.div`
   display: none;
 

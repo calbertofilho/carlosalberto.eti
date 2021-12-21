@@ -1,12 +1,12 @@
 import React from 'react';
 import { FaBars } from 'react-icons/fa';
-import { HamburgerIcon, Nav, NavBarButton, NavBarButtonLink, NavBarContainer, NavBarItem, NavBarLink, NavBarLogo, NavBarMenu } from './elements';
+import { HamburgerIcon, Nav, NavBarButton, NavBarButtonLink, NavBarContainer, NavBarItem, NavBarLink, NavBarLogo, NavBarLogoEmphasis, NavBarMenu } from './elements';
 
 const NavBar = ({ toggle }) => {
   return (
     <Nav>
       <NavBarContainer>
-        <NavBarLogo to="/">Carlos Alberto ETI</NavBarLogo>
+        <NavBarLogo to="/">Carlos<br />Alberto <NavBarLogoEmphasis>ETI</NavBarLogoEmphasis></NavBarLogo>
         <HamburgerIcon onClick={toggle}>
           <FaBars />
         </HamburgerIcon>
