@@ -36,7 +36,7 @@ export const VideoMovie = styled.video`
   -o-object-fit: cover;
   object-fit: cover;
   position: fixed;
-  background: #122111;
+  background: #010606;
   filter: hue-rotate(100deg);  /* Greenish Filter like Matrix Movie */
 `;
 
