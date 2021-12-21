@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 import { Link as LinkScroll } from 'react-scroll';
 
-export const Container = styled.div`
+export const Section = styled.section`
   background: #0c0c0c;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 800px;
+  height: 100vh;
   position: relative;
   z-index: 1;
 `;
@@ -29,15 +29,14 @@ export const VideoMovie = styled.video`
   -o-object-fit: cover;
   object-fit: cover;
   position: fixed;
-  background: #232a34;
+  background: #122111;
   filter: hue-rotate(100deg);  /* Greenish Filter like Matrix Movie */
 `;
 
-export const Wrapper = styled.div`
+export const Container = styled.div`
   width: 100%;
-  height: 100vh;
-  margin-top: 160px;
-  padding: 0 30px;
+  height: 100%;
+  padding: 80px 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;
