@@ -1,5 +1,6 @@
-import React from 'react'
-import { BtnWrapper, Button, Column1, Column2, Content, Heading, Img, ImgWrapper, Paragraph, Row, Section, TopEmphasis, Wrapper } from './elements'
+import React from 'react';
+import { BtnWrapper, Button, Column1, Column2, Content, Heading, Img, ImgWrapper, Paragraph, Row, Section, Emphasis, Wrapper } from './elements';
+import Image from '../../assets/images/undraw_businessman_re_mlee.svg';
 
 const AboutSection = () => {
   return (
@@ -8,17 +9,17 @@ const AboutSection = () => {
         <Row>
           <Column1>
            <Wrapper>
-             <TopEmphasis>TopLine</TopEmphasis>
-             <Heading>Heading</Heading>
-             <Paragraph>Subtitle</Paragraph>
+             <Emphasis>Premium Bank</Emphasis>
+             <Heading>Unlimited transactions with zero fees</Heading>
+             <Paragraph>Get access to our exclusive app that allows you to send unlimited transactions without getting charged any fees.</Paragraph>
              <BtnWrapper>
-               <Button to='/'>Button</Button>
+               <Button to='/'>Get Started</Button>
              </BtnWrapper>
            </Wrapper>
           </Column1>
           <Column2>
             <ImgWrapper>
-              <Img />
+              <Img src={Image} alt='avatar' />
             </ImgWrapper>
           </Column2>
         </Row>
