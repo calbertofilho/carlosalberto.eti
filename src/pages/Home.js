@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeroSection, NavBar, SideBar } from '../components';
+import { AboutSection, HeroSection, NavBar, SideBar } from '../components';
 
 const Home = () => {
   const [isOpen, setOpen] = React.useState(false);
@@ -13,6 +13,7 @@ const Home = () => {
       <SideBar isOpen={isOpen} toggle={toggle} />
       <NavBar toggle={toggle} />
       <HeroSection />
+      <AboutSection />
     </div>
   )
 }
