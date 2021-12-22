@@ -1,7 +1,7 @@
 import React from 'react'
 import { SideBar, NavBar, HeroSection, AboutSection, PortfolioSection, DownloadsSection, ContactSection  } from '../components';
 
-const Home = () => {
+const HomePage = () => {
   const [isOpen, setOpen] = React.useState(false);
 
   const toggle = () => {
@@ -21,4 +21,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomePage
