@@ -1,6 +1,6 @@
 import React from 'react';
 import { BtnWrapper, Button, Column1, Column2, Content, Heading, Img, ImgWrapper, Paragraph, Row, Section, Emphasis, Wrapper } from './elements';
-import Image from '../../assets/images/undraw_businessman_re_mlee.svg';
+import Image from '../../../assets/images/undraw_businessman_re_mlee.svg';
 
 const AboutSection = () => {
   return (

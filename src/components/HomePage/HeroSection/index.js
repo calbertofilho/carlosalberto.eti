@@ -1,5 +1,5 @@
 import React from 'react';
-import Video from '../../assets/videos/hero-page-1080p.mp4';
+import Video from '../../../assets/videos/hero-page-1080p.mp4';
 import { ArrowForward, ArrowRight, Background, BtnWrapper, Button, Section, Content, Heading, Paragraph, VideoMovie, Container } from './elements';
 
 const HeroSection = () => {

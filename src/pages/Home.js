@@ -1,5 +1,5 @@
 import React from 'react'
-import { SideBar, NavBar, HeroSection, AboutSection, PortfolioSection, DownloadsSection, ContactSection  } from '../components';
+import { SideBar, NavBar, HeroSection, AboutSection, PortfolioSection, DownloadsSection, ContactSection  } from '../components/HomePage';
 
 const HomePage = () => {
   const [isOpen, setOpen] = React.useState(false);
