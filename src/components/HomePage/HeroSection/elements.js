@@ -61,16 +61,56 @@ export const Content = styled.div`
 `;
 
 export const Heading = styled.h1`
+  position: relative;
+  --text-width: 374.44px;
   color: #fff;
+  font-family: 'Nova Mono', monospace;
   font-size: 3rem;
+  animation: typing 8s steps(14) infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
   text-align: center;
+  min-width: 1px;
+  -webkit-box-reflect: below -25px linear-gradient(transparent, #0004);
 
   @media screen and (max-width: 768px) {
     font-size: 2.5rem;
+    --text-width: 312.02px;
   }
 
   @media screen and (max-width: 480px) {
     font-size: 2rem;
+    --text-width: 249.63px;
+  }
+
+  @keyframes typing {
+    0%, 90%, 100% {
+      width: 0;
+    }
+    30%, 60% {
+      width: var(--text-width);
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1px;
+    height: 80%;
+    background: #01bf71;
+    animation: blinkCursor 0.7s steps(3) infinite;
+
+    @keyframes blinkCursor {
+      0%, 75% {
+        opacity: 1;
+      }
+      76%, 100% {
+        opacity: 0;
+      }
+    }
   }
 `;
 
