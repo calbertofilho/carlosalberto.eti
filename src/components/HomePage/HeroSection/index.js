@@ -1,32 +1,11 @@
 import React from 'react';
 import { ArrowForward, ArrowRight, BtnWrapper, Button, Section, Content, Heading, Paragraph, Container } from './elements';
-import Video from '../../../assets/videos/hero-page-1080p.mp4';
 
 const HeroSection = () => {
   const [hover, setHover] = React.useState(false);
   const onHover = () => {
     setHover(!hover);
   };
-
-  React.useEffect(() => {
-    window.addEventListener('scroll', () => {
-      const sections = document.querySelectorAll('section');
-      let currentSection = '';
-  
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-  
-        if (window.pageYOffset >= sectionTop) {
-          currentSection = section.getAttribute('id');
-        }
-      });
-
-      if (currentSection === 'home') {
-        console.log(document.getElementById('video').currentSrc.match(('[^/]*)$')));
-      }
-      // document.getElementById('video').src = `${Video}`;
-    });
-  })
 
   return (
     <Section id='home'>
