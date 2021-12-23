@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  background: linear-gradient(-45deg, rgb(41, 167, 251), rgb(1, 170, 147), rgb(1, 170, 147), rgb(1, 170, 147)) no-repeat;
-  background-size: 2000% 2000%;
-  background-attachment: fixed;
 	width: 100%;
 	height: 100vh;
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   scroll-snap-align: center;
   overflow: hidden;
   position: relative;

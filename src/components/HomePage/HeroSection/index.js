@@ -1,19 +1,14 @@
 import React from 'react';
-import Video from '../../../assets/videos/hero-page-1080p.mp4';
-import { ArrowForward, ArrowRight, Background, BtnWrapper, Button, Section, Content, Heading, Paragraph, VideoMovie, Container } from './elements';
+import { ArrowForward, ArrowRight, BtnWrapper, Button, Section, Content, Heading, Paragraph, Container } from './elements';
 
 const HeroSection = () => {
   const [hover, setHover] = React.useState(false);
-
   const onHover = () => {
     setHover(!hover);
   };
 
   return (
     <Section id='home'>
-      <Background>
-        <VideoMovie type='video/mp4' src={Video} autoPlay loop muted />
-      </Background>
       <Container>
         <Content>
           <Heading>Carlos Alberto</Heading>

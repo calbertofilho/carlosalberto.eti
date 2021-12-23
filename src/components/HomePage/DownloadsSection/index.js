@@ -1,10 +1,10 @@
 import React from 'react'
-import { Section } from './elements'
+import { Section } from './elements';
 
 const DownloadsSection = () => {
   return (
     <Section id='downloads'>
-      
+
     </Section>
   )
 }

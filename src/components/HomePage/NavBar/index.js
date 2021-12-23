@@ -6,7 +6,6 @@ const NavBar = ({ toggle }) => {
   const changeMenuActive = () => {
     const sections = document.querySelectorAll('section');
     const navList = document.querySelectorAll('#menuLinks a');
-    console.log(navList);
 
     let currentSection = '';
 

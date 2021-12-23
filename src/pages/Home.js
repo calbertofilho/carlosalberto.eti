@@ -1,5 +1,5 @@
 import React from 'react'
-import { SideBar, NavBar, HeroSection, AboutSection, PortfolioSection, DownloadsSection, ContactSection  } from '../components/HomePage';
+import { MovieBackground, SideBar, NavBar, HeroSection, AboutSection, PortfolioSection, DownloadsSection, ContactSection  } from '../components/HomePage';
 
 const HomePage = () => {
   const [isOpen, setOpen] = React.useState(false);
@@ -10,6 +10,7 @@ const HomePage = () => {
 
   return (
     <div>
+      <MovieBackground />
       <SideBar isOpen={isOpen} toggle={toggle} />
       <NavBar toggle={toggle} />
       <HeroSection />
