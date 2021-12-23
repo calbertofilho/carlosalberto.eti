@@ -27,7 +27,7 @@ const NavBar = ({ toggle }) => {
 
   React.useEffect(() => {
     window.addEventListener('scroll', changeMenuActive);
-  }, [])
+  })
 
   return (
     <Nav>
