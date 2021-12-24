@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link as LinkScroll } from 'react-scroll';
 
 export const Section = styled.section`
   background: #010606;
