@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import AboutBg from '../../../assets/images/about.jpg';
+import AboutBg from '../../../../assets/images/about.jpg';
 
 export const Section = styled.section`
   background: url(${AboutBg});

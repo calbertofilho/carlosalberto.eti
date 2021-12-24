@@ -1,10 +1,10 @@
-import AboutSection from "./AboutSection";
-import ContactSection from "./ContactSection";
-import DownloadsSection from "./DownloadsSection";
-import HeroSection from "./HeroSection";
-import MovieBackground from "./MovieBackground";
-import PortfolioSection from "./PortfolioSection";
-import NavBar from "./NavBar";
-import SideBar from "./SideBar";
+import AboutSection from "./Sections/About";
+import ContactSection from "./Sections/Contact";
+import DownloadsSection from "./Sections/Downloads";
+import HeroSection from "./Sections/Hero";
+import MovieBackground from "./Background/Movies";
+import PortfolioSection from "./Sections/Portfolio";
+import NavBar from "./Menus/NavBar";
+import SideBar from "./Menus/SideBar";
 
 export { AboutSection, ContactSection, DownloadsSection, HeroSection, MovieBackground, PortfolioSection, NavBar, SideBar };

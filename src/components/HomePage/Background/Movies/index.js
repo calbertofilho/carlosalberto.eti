@@ -1,7 +1,7 @@
 import React from 'react'
 import { Background, VideoMovie } from './elements';
-import Video1 from '../../../assets/videos/hero-page-1080p.mp4';
-import Video2 from '../../../assets/videos/production-1080p.mp4';
+import Video1 from '../../../../assets/videos/hero-page-1080p.mp4';
+import Video2 from '../../../../assets/videos/production-1080p.mp4';
 
 const MovieBackground = () => {
   const sectionVisibleIs = (section) => {
