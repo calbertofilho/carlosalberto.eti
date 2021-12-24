@@ -5,6 +5,10 @@ export const Section = styled.section`
   background: #010606;
   width: 100%;
 	height: 100vh;
+  padding: 100px 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   scroll-snap-align: center;
   overflow: hidden;
   position: relative;
@@ -15,115 +19,78 @@ export const Section = styled.section`
   }
 
   @media screen and (max-width: 768px) {
-    padding: 100px 0;
+    height: 1100px;
   }
-`;
 
-export const Content = styled.div`
-  display: grid;
-  width: 100%;
-  height: 100%;
-  max-width: 1100px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 80px 30px 0;
-  justify-content: center;
-  /* overflow: hidden; */
-`;
-
-export const Row = styled.div`
-  display: grid;
-  grid-auto-columns: minmax(auto, 1fr);
-  align-items: center;
-  grid-template-areas: 'col2 col1';
-
-  @media screen and (max-width: 768px) {
-    grid-template-areas: 'col1 col1' 'col2 col2';
+  @media screen and (max-width: 480px) {
+    height: 1300px;
   }
-`;
-
-export const Column1 = styled.div`
-  margin-bottom: 15px;
-  padding: 0 15px;
-  grid-area: col1;
-`;
-
-export const Wrapper = styled.div`
-  max-width: 540px;
-  padding-top: 0;
-  padding-bottom: 60px;
 `;
 
 export const Emphasis = styled.span`
   color: #01bf71;
   display: block;
-  font-size: 1.25rem;
+  font-size: 2.5rem;
   line-height: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  margin-bottom: 1.25rem;
-`;
+  margin-bottom: 4rem;
 
-export const Heading = styled.h1`
-  margin-bottom: 1.5rem;
-  font-size: 3rem;
-  line-height: 1.1em;
-  font-weight: 600;
-  color: #f7f8fa;
-
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     font-size: 2rem;
   }
 `;
 
-export const Paragraph = styled.p`
-  max-width: 440px;
-  margin-bottom: 2.15rem;
-  font-size: 1.15rem;
-  line-height: 1.5rem;
-  color: #fff;
-`;
-
-export const BtnWrapper = styled.div`
-  display: flex;
-  justify-content: flex-start;
-`;
-
-export const Button = styled(LinkScroll)`
-  border-radius: 50px;
-  background: #01bf71;
-  white-space: nowrap;
-  padding: 12px 30px;
-  color: #010606;
-  font-size: 1.25rem;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
+export const Wrapper = styled.div`
+  max-width: 1000px;
+  padding: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  transition: all 0.2s ease-in-out;
+  grid-gap: 16px;
 
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
   }
 `;
 
-export const Column2 = styled.div`
-  margin-bottom: 15px;
-  padding: 0 15px;
-  grid-area: col2;
+export const Card = styled.div`
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  max-height: 300px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+    pointer: cursor;
+  }
 `;
 
-export const ImgWrapper = styled.div`
-  max-width: 555px;
-  height: 100%;
+export const ImgDesign = styled.img`
+  height: 150px;
+  width: 250px;
+  margin-bottom: 10px;
 `;
 
-export const Img = styled.img`
-  width: 100%;
-  margin: 0 0 10px 0;
-  padding-right: 0;
+export const Heading = styled.h1`
+  font-size: 1rem;
+  margin-bottom: 10px;
+`;
+
+export const Paragraph = styled.p`
+  font-size: 1rem;
+  text-align: center;
 `;
