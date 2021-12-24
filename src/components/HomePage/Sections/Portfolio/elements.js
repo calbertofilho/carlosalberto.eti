@@ -17,6 +17,10 @@ export const Section = styled.section`
     scroll-snap-align: none;
   }
 
+  @media screen and (min-height: 800px) {
+    justify-content: center;
+  }
+
   @media screen and (max-width: 768px) {
     height: 1100px;
   }
