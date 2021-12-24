@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Heading, ImgDesign, Paragraph, Section, Emphasis, Wrapper } from './elements';
 import Image1 from '../../../../assets/images/portfolio1.jpg';
-import Image2 from '../../../../assets/images/portfolio2.png';
+import Image2 from '../../../../assets/images/portfolio2.jpg';
 import Image3 from '../../../../assets/images/portfolio3.jpg';
 import Image4 from '../../../../assets/images/portfolio4.jpg';
 import Image5 from '../../../../assets/images/portfolio5.jpg';
