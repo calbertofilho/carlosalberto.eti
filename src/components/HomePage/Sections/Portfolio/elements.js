@@ -64,7 +64,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Card = styled.div`
-  background: #fff;
+  background: #ebffee;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

@@ -42,6 +42,7 @@ export const Content = styled.div`
 export const Heading = styled.h1`
   position: relative;
   --text-width: 374.44px;
+  /* --text-width: 391.3px; */
   color: #fff;
   font-family: 'Nova Mono', monospace;
   font-size: 3rem;
@@ -57,11 +58,13 @@ export const Heading = styled.h1`
   @media screen and (max-width: 768px) {
     font-size: 2.5rem;
     --text-width: 312.02px;
+    /* --text-width: 325.967px; */
   }
 
   @media screen and (max-width: 480px) {
     font-size: 2rem;
     --text-width: 249.63px;
+    /* --text-width: 260.867px; */
   }
 
   @keyframes typing {
