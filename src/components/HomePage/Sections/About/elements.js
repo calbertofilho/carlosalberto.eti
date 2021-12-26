@@ -6,7 +6,7 @@ export const Section = styled.section`
   background-size: cover;
   background-attachment: fixed;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
   scroll-snap-align: center;
   overflow: hidden;
   position: relative;
