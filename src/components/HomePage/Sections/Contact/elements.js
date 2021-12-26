@@ -100,9 +100,10 @@ export const Label = styled.label`
 `;
 
 export const TextArea = styled.textarea`
+  --textarea-height: 13rem;
   resize: none;
   margin: 1rem 0;
-  height: 13rem;
+  height: var(--textarea-height);
   width: 100%;
   color: #01bf71;
   border: none;
@@ -120,11 +121,15 @@ export const TextArea = styled.textarea`
   }
   &:focus + label,
   &:not(:placeholder-shown)&:not(:focus) + label {
-    transform: translateY(-13.7rem);
+    transform: translateY(calc(-1 * (var(--textarea-height) + 0.7rem)));
     color: #01bf71;
   }
   &:not(:placeholder-shown)&:not(:focus) {
     background-size: 100% 2px, 100% 2px, 100%;
+  }
+
+  @media screen and (max-height: 800px) {
+    --textarea-height: 6rem;
   }
 `;
 
