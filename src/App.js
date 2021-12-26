@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomePage from './pages/Home';
 import AppPage from './pages/NoAzul';
+import ThanksPage from './pages/Thanks';
 import './App.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Switch>
         <Route path='/' component={HomePage} exact />
         <Route path='/app' component={AppPage} exact />
+        <Route path='/thanks' component={ThanksPage} exact />
       </Switch>
     </BrowserRouter>
   );
