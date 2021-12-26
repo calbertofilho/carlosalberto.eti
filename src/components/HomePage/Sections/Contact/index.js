@@ -1,30 +1,30 @@
-import React from 'react'
-import { Emphasis, Section, Form, Wrapper, InputArea, Input, Label, TextArea, ButtonArea, Button } from './elements'
+import React from 'react';
+import { Emphasis, Section, Form, Wrapper, InputArea, Input, Label, TextArea, ButtonArea, Button } from './elements';
 
 const ContactSection = () => {
   return (
     <Section id='contact'>
       <Emphasis>Contato</Emphasis>
-      <Form action="https://formsubmit.co/carlos@lberto.eti.br" method="POST" encType='multipart/form-data'>
+      <Form action='https://formsubmit.co/carlos@lberto.eti.br' method='POST' encType='multipart/form-data'>
         <Wrapper>
           <InputArea>
-            <Input type='text' name='name' placeholder=' ' autocomplete='nofill' />
+            <Input type='text' name='name' placeholder=' ' autocomplete='false' />
             <Label htmlFor='tel'>Nome</Label>
           </InputArea>
           <InputArea>
-            <Input type='email' name='email' placeholder=' ' autocomplete='nofill' />
+            <Input type='email' name='email' placeholder=' ' autocomplete='false' />
             <Label htmlFor='email'>Email</Label>
           </InputArea>
           <InputArea>
-            <Input type='tel' name='tel' placeholder=' ' autocomplete='nofill' />
+            <Input type='tel' name='tel' placeholder=' ' autocomplete='false' maxLength='15' />
             <Label htmlFor='tel'>Telefone</Label>
           </InputArea>
           <InputArea>
-            <Input type='text' name='_subject' placeholder=' ' autocomplete='nofill' />
+            <Input type='text' name='_subject' placeholder=' ' autocomplete='false' />
             <Label htmlFor='_subject'>Projeto</Label>
           </InputArea>
           <InputArea>
-            <TextArea name='message' placeholder=' ' autocomplete='nofill'></TextArea>
+            <TextArea name='message' placeholder=' ' autocomplete='false'></TextArea>
             <Label htmlFor='message'>Mensagem</Label>
           </InputArea>
           <ButtonArea>
