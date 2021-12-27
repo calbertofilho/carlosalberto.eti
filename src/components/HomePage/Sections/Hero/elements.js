@@ -53,7 +53,7 @@ export const Heading = styled.h1`
   user-select: none;
   text-align: center;
   min-width: 1px;
-  -webkit-box-reflect: below -25px linear-gradient(transparent, #0004);
+  -webkit-box-reflect: below -25px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
 
   @media screen and (max-width: 768px) {
     font-size: 2.5rem;

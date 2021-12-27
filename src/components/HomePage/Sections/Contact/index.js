@@ -1,40 +1,68 @@
 import React from 'react';
-import { Emphasis, Section, Form, Wrapper, InputArea, Input, Label, TextArea, ButtonArea, Button } from './elements';
+import { MdEmail, MdLocationOn, MdPhone, MdHorizontalRule } from "react-icons/md";
+import { Section, EmphasisBox, Emphasis, Paragraph, ContentBox, ContactInfoBox, InfoBox, Heading, Wrapper, Icon, Text, InfoTitle, Info, FormBox, Form, Label, Input, TextArea, BtnWrap, Submit, Reset } from './elements';
 
 const ContactSection = () => {
   return (
     <Section id='contact'>
-      <Emphasis>Contato</Emphasis>
-      <Form action='https://formsubmit.co/carlos@lberto.eti.br' method='POST' encType='multipart/form-data'>
-        <Wrapper>
-          <InputArea>
-            <Input type='text' name='name' placeholder=' ' autocomplete='false' />
+      <EmphasisBox>
+        <Emphasis>Contato</Emphasis>
+        <Paragraph>
+          <MdHorizontalRule /> Fique a vontade para entrar em contato comigo e solicitar um orçamento para seu projeto. <MdHorizontalRule />
+        </Paragraph>
+      </EmphasisBox>
+      <ContentBox>
+        <ContactInfoBox>
+          <Heading>Stay In Touch</Heading>
+          <Wrapper>
+            <InfoBox>
+              <Icon><MdLocationOn /></Icon>
+              <Text>
+                <InfoTitle>Endereço</InfoTitle>
+                <Info>R Mariana Furtado Leite, 1036<br />Fortaleza, Ceará, Brasil<br />60.811-030</Info>
+              </Text>
+            </InfoBox>
+
+            <InfoBox>
+              <Icon><MdPhone /></Icon>
+              <Text>
+                <InfoTitle>Telefone</InfoTitle>
+                <Info>+55 85 98899-8844</Info>
+              </Text>
+            </InfoBox>
+
+            <InfoBox>
+              <Icon><MdEmail /></Icon>
+              <Text>
+                <InfoTitle>E-Mail</InfoTitle>
+                <Info>carlos@lberto.eti.br</Info>
+              </Text>
+            </InfoBox>
+          </Wrapper>
+        </ContactInfoBox>
+        <FormBox>
+          <Form action='https://formsubmit.co/carlos@lberto.eti.br' method='POST' encType='multipart/form-data' autoComplete='false'>
+            <Heading>E-Mail</Heading>
             <Label htmlFor='tel'>Nome</Label>
-          </InputArea>
-          <InputArea>
-            <Input type='email' name='email' placeholder=' ' autocomplete='false' />
+            <Input type='text' name='name' placeholder=' ' autoComplete='false' />
             <Label htmlFor='email'>Email</Label>
-          </InputArea>
-          <InputArea>
-            <Input type='tel' name='tel' placeholder=' ' autocomplete='false' maxLength='15' />
+            <Input type='email' name='email' placeholder=' ' autoComplete='nofill' />
             <Label htmlFor='tel'>Telefone</Label>
-          </InputArea>
-          <InputArea>
-            <Input type='text' name='_subject' placeholder=' ' autocomplete='false' />
+            <Input type='tel' name='tel' placeholder=' ' autoComplete='nofill' maxLength='15' />
             <Label htmlFor='_subject'>Projeto</Label>
-          </InputArea>
-          <InputArea>
-            <TextArea name='message' placeholder=' ' autocomplete='false'></TextArea>
+            <Input type='text' name='_subject' placeholder=' ' autoComplete='nofill' />
             <Label htmlFor='message'>Mensagem</Label>
-          </InputArea>
-          <ButtonArea>
-            <Button type='submit' value='Enviar' />
-          </ButtonArea>
-          <input type='hidden' name='_template' value='basic' />
-          <input type='hidden' name='_captcha' value='false' />
-          <input type="hidden" name="_next" value="https://www.carlosalberto.eti.br/thanks" />
-        </Wrapper>
-      </Form>
+            <TextArea name='message' placeholder=' ' autoComplete='nofill'></TextArea>
+            <BtnWrap>
+              <Reset type='reset' value='Limpar' />
+              <Submit type='submit' value='Enviar' />
+            </BtnWrap>
+            <input type='hidden' name='_template' value='basic' />
+            <input type='hidden' name='_captcha' value='false' />
+            <input type="hidden" name="_next" value="https://www.carlosalberto.eti.br/thanks" />
+          </Form>
+        </FormBox>
+      </ContentBox>
     </Section>
   )
 }

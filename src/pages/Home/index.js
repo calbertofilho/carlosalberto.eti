@@ -2,6 +2,13 @@ import React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { MovieBackground, SideBar, NavBar, HeroSection, AboutSection, PortfolioSection, DownloadsSection, ContactSection  } from '../../components/HomePage';
 import GlobalStyles from './styles';
+import WebFont from 'webfontloader';
+
+WebFont.load({
+  google: {
+    families: ['Encode Sans Expanded: 100,200,300,400,500,600,700,800,900', 'Syne Mono', 'Nova Mono', 'Material Icons', 'Material Icons Outlined', 'Material Icons Two Tone', 'Material Icons Round', 'Material Icons Sharp']
+  }
+});
 
 const HomePage = () => {
   const [isOpen, setOpen] = React.useState(false);
