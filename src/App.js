@@ -10,15 +10,15 @@ function App() {
   return (
     <HelmetProvider>
       <Helmet htmlAttributes={{ lang : 'pt-br' }}>
-        <meta charset="utf-8" />
+        <meta charset="UTF-8" />
         <meta http-equiv="Content-Language" content="pt-br" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta name="description" content="Especialista em Tecnologia da Informação" />
         <title>Carlos Alberto ETI</title>
       </Helmet>
+      <GlobalStyles />
       <BrowserRouter>
-        <GlobalStyles />
         <Switch>
           <Route path='/' component={HomePage} exact />
           <Route path='/app' component={AppPage} exact />
