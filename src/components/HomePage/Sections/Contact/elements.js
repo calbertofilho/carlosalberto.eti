@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components/macro';
 
 export const Section = styled.section`
   background: #010606;
@@ -63,9 +63,7 @@ export const InputArea = styled.div`
   margin: 32px 0;
 `;
 
-export const Input = styled.input`
-  height: 4rem;
-  height: 100%;
+export const commonInputArea = css`
   width: 100%;
   color: #01bf71;
   border: none;
@@ -74,6 +72,11 @@ export const Input = styled.input`
               linear-gradient(90deg, #010606, #003b23) left bottom/100% 2px no-repeat,
               linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,0)) left bottom/100% no-repeat;
   transition: background-size 0.3s ease;
+`;
+
+export const Input = styled.input`
+  ${commonInputArea};
+  height: 4rem;
 
   &:focus {
     background-size: 100% 2px, 100% 2px, 100%;
@@ -100,19 +103,12 @@ export const Label = styled.label`
 `;
 
 export const TextArea = styled.textarea`
+  ${commonInputArea};
   --textarea-height: 13rem;
   --textarea-transform: -13.7rem;
+  height: var(--textarea-height);
   resize: none;
   margin: 1rem 0;
-  height: var(--textarea-height);
-  width: 100%;
-  color: #01bf71;
-  border: none;
-  font-size: 1.7rem;
-  background: linear-gradient(90deg, #010606, #01bf71) left bottom/0 2px no-repeat,
-              linear-gradient(90deg, #010606, #003b23) left bottom/100% 2px no-repeat,
-              linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,0)) left bottom/100% no-repeat;
-  transition: background-size 0.3s ease;
 
   &:focus {
     background-size: 100% 2px, 100% 2px, 100%;

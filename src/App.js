@@ -3,11 +3,13 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomePage from './pages/Home';
 import AppPage from './pages/NoAzul';
 import ThanksPage from './pages/Thanks';
-import './App.css';
+import GlobalStyles from './GlobalStyles';
+import './Fonts.css';
 
 function App() {
   return (
     <BrowserRouter>
+      <GlobalStyles />
       <Switch>
         <Route path='/' component={HomePage} exact />
         <Route path='/app' component={AppPage} exact />
