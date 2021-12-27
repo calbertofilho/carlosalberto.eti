@@ -1,10 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import GlobalStyles from './GlobalStyles';
 import HomePage from './pages/Home';
 import AppPage from './pages/NoAzul';
 import ThanksPage from './pages/Thanks';
-import GlobalStyles from './GlobalStyles';
-import './Fonts.css';
 
 function App() {
   return (
