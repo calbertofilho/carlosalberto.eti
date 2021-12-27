@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaBars } from 'react-icons/fa';
+import { menuData } from '../Data';
 import { HamburgerIcon, Nav, NavBarButton, NavBarButtonLink, NavBarContainer, NavBarItem, NavBarLink, NavBarLogo, NavBarLogoEmphasis, NavBarMenu } from './elements';
 
 const NavBar = ({ toggle }) => {
@@ -37,18 +38,11 @@ const NavBar = ({ toggle }) => {
           <FaBars />
         </HamburgerIcon>
         <NavBarMenu id='menuLinks'>
-          <NavBarItem>
-            <NavBarLink to='about' className='about'>Sobre</NavBarLink>
-          </NavBarItem>
-          <NavBarItem>
-            <NavBarLink to='portfolio' className='portfolio'>Portfolio</NavBarLink>
-          </NavBarItem>
-          <NavBarItem>
-            <NavBarLink to='downloads' className='downloads'>Downloads</NavBarLink>
-          </NavBarItem>
-          <NavBarItem>
-            <NavBarLink to='contact' className='contact'>Contato</NavBarLink>
-          </NavBarItem>
+          {menuData.map((item, index) => (
+            <NavBarItem key={index}>
+              <NavBarLink to={item.link} className={item.link}>{item.title}</NavBarLink>
+            </NavBarItem>
+          ))}
         </NavBarMenu>
         <NavBarButton>
           <NavBarButtonLink to="/app">App</NavBarButtonLink>
