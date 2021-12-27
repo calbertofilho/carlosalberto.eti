@@ -26,7 +26,7 @@ export const Section = styled.section`
 export const EmphasisBox = styled.div`
   width: 100%;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
 `;
 
 export const Emphasis = styled.span`
@@ -108,7 +108,26 @@ export const Form = styled.form`
   flex-direction: column;
 `;
 
+export const InputWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 24px;
+`;
+
+export const EmailArea = styled.div`
+  width: 70%;
+  display: grid;
+`;
+
+export const TelArea = styled.div`
+  width: 30%;
+  display: grid;
+`;
+
 export const commonInputStyle = css`
+  width: 100%;
   margin-bottom: 10px;
   padding: 15px;
   font-size: 16px;
@@ -117,13 +136,25 @@ export const commonInputStyle = css`
   background: #222;
   color: #fff;
   border-radius: 15px;
+
+  &:focus + label {
+    transform: translate(-16px, -34px);
+    color: #01bf71;
+  }
+  &:not(:placeholder-shown)&:not(:focus) + label {
+    transform: translate(-16px, -34px);
+    color: #01bf71;
+  }
 `;
 
 export const Label = styled.label`
-  color: #01bf71;
+  color: #aaa;
   position: relative;
-  top: 34px;
+  pointer-events: none;
+  top: -45px;
   left: 16px;
+  transition: transform 0.3s ease,
+                  color 0.3s ease;
 `;
 
 export const Input = styled.input`
@@ -134,6 +165,10 @@ export const TextArea = styled.textarea`
   ${commonInputStyle};
   resize: none;
   min-height: 140px;
+
+  & + label {
+    top: -136px;
+  }
 `;
 
 export const BtnWrap = styled.div`
