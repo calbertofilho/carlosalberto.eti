@@ -27,6 +27,20 @@ const GlobalStyles = createGlobalStyle`
   html::-webkit-scrollbar {
     display: none;
   }
+
+  body {
+    user-select: none;
+  }
+
+  ::-moz-selection { /* Code for Firefox */
+    background: #01bf71;
+    color: #010606; 
+  }
+
+  ::selection {
+    background: #01bf71;
+    color: #010606; 
+  }
 `;
 
 export default GlobalStyles;

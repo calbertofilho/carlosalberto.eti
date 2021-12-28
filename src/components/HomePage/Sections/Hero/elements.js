@@ -3,8 +3,10 @@ import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 import { Link as LinkScroll } from 'react-scroll';
 
 export const Section = styled.section`
+  background: rgba(0, 0, 0, 0.6);
 	width: 100%;
-  height: 100vh;
+	min-height: 100vh;
+  padding: 80px 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,17 +22,6 @@ export const Section = styled.section`
 `;
 
 export const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  padding: 80px 30px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 3;
-`;
-
-export const Content = styled.div`
   max-width: 1200px;
   position: absolute;
   padding: 8px 24px;
@@ -41,7 +32,7 @@ export const Content = styled.div`
 
 export const Heading = styled.h1`
   position: relative;
-  --text-width: 374.44px;
+  --text-width: 377.34px;
   /* --text-width: 391.3px; */
   color: #fff;
   font-family: 'Nova Mono', monospace;
@@ -53,7 +44,8 @@ export const Heading = styled.h1`
   user-select: none;
   text-align: center;
   min-width: 1px;
-  -webkit-box-reflect: below -25px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  margin-bottom: 36px;
+  -webkit-box-reflect: below -25px linear-gradient(transparent, rgba(255, 255, 255, 0.15));
 
   @media screen and (max-width: 768px) {
     font-size: 2.5rem;
@@ -97,11 +89,12 @@ export const Heading = styled.h1`
 `;
 
 export const Paragraph = styled.p`
-  margin-top: 24px;
+  margin-bottom: 12px;
   color: #fff;
   font-size: 1.5rem;
   text-align: center;
   max-width: 600px;
+  pointer-events: none;
 
   @media screen and (max-width: 768px) {
     font-size: 1.125rem;

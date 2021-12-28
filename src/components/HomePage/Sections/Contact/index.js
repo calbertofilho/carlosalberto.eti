@@ -41,19 +41,19 @@ const ContactSection = () => {
         <FormBox>
           <Form action='https://formsubmit.co/carlos@lberto.eti.br' method='POST' encType='multipart/form-data' autoComplete='false'>
             <Heading>E-Mail</Heading>
-            <Input type='text' name='name' placeholder=' ' autoComplete='false' />
-            <Label htmlFor='tel'>Nome</Label>
+            <Input name='name' type='text' placeholder=' ' autoComplete='false' />
+            <Label htmlFor='name'>Nome</Label>
             <InputWrap>
               <EmailArea>
-                <Input type='email' name='email' placeholder=' ' autoComplete='nofill' />
+                <Input name='email' type='email' placeholder=' ' autoComplete='nofill' />
                 <Label htmlFor='email'>Email</Label>
               </EmailArea>
               <TelArea>
-                <Input type='tel' name='tel' placeholder=' ' autoComplete='nofill' maxLength='15' />
+                <Input name='tel' type='tel' placeholder=' ' autoComplete='nofill' maxLength='15' />
                 <Label htmlFor='tel'>Telefone</Label>
               </TelArea>
             </InputWrap>
-            <Input type='text' name='_subject' placeholder=' ' autoComplete='nofill' />
+            <Input name='_subject' type='text' placeholder=' ' autoComplete='nofill' />
             <Label htmlFor='_subject'>Projeto</Label>
             <TextArea name='message' placeholder=' ' autoComplete='nofill'></TextArea>
             <Label htmlFor='message'>Mensagem</Label>
