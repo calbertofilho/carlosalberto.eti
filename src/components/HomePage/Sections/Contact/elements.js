@@ -118,6 +118,7 @@ export const InputWrap = styled.div`
 
 export const EmailArea = styled.div`
   width: 70%;
+  position: relative;
   display: grid;
 `;
 
@@ -169,6 +170,10 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   ${commonInputStyle};
+
+  &.email {
+    padding-right: 40px;
+  }
 `;
 
 export const TextArea = styled.textarea`
@@ -178,6 +183,31 @@ export const TextArea = styled.textarea`
 
   & + label {
     top: -136px;
+  }
+`;
+
+export const Indicator = styled.span`
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  background: #222;
+  border-radius: 50%;
+
+  &.valid {
+    background: #0f0;
+    box-shadow: 0 0  5px #0f0,
+                0 0 10px #0f0,
+                0 0 20px #0f0,
+                0 0 40px #0f0;
+  }
+  &.invalid {
+    background: #f00;
+    box-shadow: 0 0  5px #f00,
+                0 0 10px #f00,
+                0 0 20px #f00,
+                0 0 40px #f00;
   }
 `;
 

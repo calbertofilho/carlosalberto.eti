@@ -1,8 +1,25 @@
 import React from 'react';
 import { MdEmail, MdLocationOn, MdPhone, MdHorizontalRule } from "react-icons/md";
-import { Section, EmphasisBox, Emphasis, Paragraph, ContentBox, ContactInfoBox, InfoBox, Heading, Wrapper, Icon, Text, InfoTitle, Info, FormBox, Form, Label, Input, InputWrap, EmailArea, TelArea, TextArea, BtnWrap, Submit, Reset } from './elements';
+import { Section, EmphasisBox, Emphasis, Paragraph, ContentBox, ContactInfoBox, InfoBox, Heading, Wrapper, Icon, Text, InfoTitle, Info, FormBox, Form, Label, Input, InputWrap, EmailArea, TelArea, TextArea, BtnWrap, Submit, Reset, Indicator } from './elements';
 
 const ContactSection = () => {
+  const indicator = document.getElementById('indicator');
+
+  const validaEmail = (email) => {
+    const pattern = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})$/; // eslint-disable-line
+    if (pattern.test(email)) {
+      indicator.classList.add('valid');
+      indicator.classList.remove('invalid');
+    } else {
+      indicator.classList.add('invalid');
+      indicator.classList.remove('valid');
+    }
+    if (email === '') {
+      indicator.classList.remove('valid');
+      indicator.classList.remove('invalid');
+    }
+  };
+
   return (
     <Section id='contact'>
       <EmphasisBox>
@@ -45,8 +62,9 @@ const ContactSection = () => {
             <Label htmlFor='name'>Nome</Label>
             <InputWrap>
               <EmailArea>
-                <Input name='email' type='email' placeholder=' ' autoComplete='nofill' />
+                <Input name='email' type='email' className='email' placeholder=' ' autoComplete='nofill' onChange={e => validaEmail(e.target.value)} />
                 <Label htmlFor='email'>Email</Label>
+                <Indicator id='indicator' />
               </EmailArea>
               <TelArea>
                 <Input name='tel' type='tel' placeholder=' ' autoComplete='nofill' maxLength='15' />
