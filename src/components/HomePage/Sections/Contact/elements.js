@@ -133,14 +133,24 @@ export const commonInputStyle = css`
   font-size: 16px;
   border: none;
   outline: none;
-  background: #222;
   color: #fff;
-  border-radius: 15px;
+  border-radius: 20px;
+  background: linear-gradient(to right, #01bf71, #01bf71) left bottom/0 2px no-repeat,
+              linear-gradient(to right, #010606, #222) left bottom/100% 2px no-repeat,
+              linear-gradient(to top, #01bf71, 0.5%, #010606) left bottom/0 no-repeat;
+  transition: background-size 0.3s ease;
 
-  &:focus + label {
-    transform: translate(-16px, -34px);
-    color: #01bf71;
+  &:focus {
+    background-size: 100% 2px,
+                     100% 2px,
+                     100%;
   }
+  &:not(:placeholder-shown)&:not(:focus) {
+    background-size: 100% 2px,
+                     100% 2px,
+                     0%;
+  }
+  &:focus + label,
   &:not(:placeholder-shown)&:not(:focus) + label {
     transform: translate(-16px, -34px);
     color: #01bf71;
