@@ -68,8 +68,6 @@ export const Heading = styled.h1`
   margin-bottom: 24px;
 `;
 
-export const Wrapper = styled.div``;
-
 export const InfoBox = styled.div`
   position: relative;
   padding: 20px 0;
@@ -97,7 +95,9 @@ export const InfoTitle = styled.h1`
   font-weight: 500;
 `;
 
-export const Info = styled.p``;
+export const Info = styled.p`
+  color: #fff;
+`;
 
 export const FormBox = styled.div`
   min-width: 60%;
