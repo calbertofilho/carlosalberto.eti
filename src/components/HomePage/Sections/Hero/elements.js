@@ -32,12 +32,13 @@ export const Container = styled.div`
 
 export const Heading = styled.h1`
   position: relative;
-  --text-width: 377.34px;
   /* --text-width: 391.3px; */
   color: #fff;
   font-family: 'Nova Mono', monospace;
   font-size: 3rem;
-  animation: typing 8s steps(14) infinite;
+  --text-width: 377.34px;
+  --text-reflect: -25px;
+  /* animation: typing 8s steps(14) infinite; */
   white-space: nowrap;
   overflow: hidden;
   pointer-events: none;
@@ -45,17 +46,26 @@ export const Heading = styled.h1`
   text-align: center;
   min-width: 1px;
   margin-bottom: 36px;
-  -webkit-box-reflect: below -25px linear-gradient(transparent, rgba(255, 255, 255, 0.15));
+  -webkit-box-reflect: below var(--text-reflect) linear-gradient(transparent, rgba(255, 255, 255, 0.15));
 
   @media screen and (max-width: 768px) {
     font-size: 2.5rem;
-    --text-width: 312.02px;
+    --text-width: 314.45px;
+    --text-reflect: -20px;
     /* --text-width: 325.967px; */
   }
 
   @media screen and (max-width: 480px) {
     font-size: 2rem;
-    --text-width: 249.63px;
+    --text-width: 251.56px;
+    --text-reflect: -15px;
+    /* --text-width: 260.867px; */
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 1.5rem;
+    --text-width: 188.67px;
+    --text-reflect: -10px;
     /* --text-width: 260.867px; */
   }
 
