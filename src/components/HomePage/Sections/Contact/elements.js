@@ -242,6 +242,14 @@ export const commonButtonStyle = css`
 export const Submit = styled.input`
   ${commonButtonStyle};
   background: #01bf71;
+
+  &.disabled {
+    display: block !important;
+    pointer-events: none;
+    background: #222;
+    color: #aaa;
+    border: solid 1px #aaa;
+  }
 `;
 
 export const Reset = styled.input`

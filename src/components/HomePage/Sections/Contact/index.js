@@ -4,8 +4,12 @@ import { Section, EmphasisBox, Emphasis, Paragraph, ContentBox, ContactInfoBox, 
 
 
 const ContactSection = () => {
-  const [tel, setTel] = React.useState('');
+  const [name, setName] = React.useState('');
   let indicator;
+  const [tel, setTel] = React.useState('');
+  const [subject, setSubject] = React.useState('');
+  const [message, setMessage] = React.useState('');
+  let sendButton;
 
   const mascaraTel = (phone) => {
     phone = phone.replace(/\D/g, '');
@@ -15,10 +19,14 @@ const ContactSection = () => {
   };
 
   const removeValores = () => {
+    setName('');
     indicator = document.getElementById('indicator');
     indicator.classList.remove('valid');
     indicator.classList.remove('invalid');
     setTel('');
+    setSubject('');
+    setMessage('');
+    validaFormulario();
   };
 
   const validaEmail = (email) => {
@@ -36,6 +44,22 @@ const ContactSection = () => {
       indicator.classList.remove('valid');
       indicator.classList.remove('invalid');
     }
+  };
+
+  const validaFormulario = () => {
+    indicator = document.getElementById('indicator');
+    sendButton = document.getElementById('send');
+
+    if ((name.length !== 0) && indicator.classList.contains('valid') && (tel.length === 15) && (subject.length !== 0) && (message.length !== 0)) {
+      sendButton.disabled = false;
+      sendButton.classList.remove('disabled');
+    } else {
+      sendButton.disabled = true;
+      if (!sendButton.classList.contains('disabled')) {
+        sendButton.classList.add('disabled');
+      }
+    }
+
   };
 
   return (
@@ -74,26 +98,26 @@ const ContactSection = () => {
         <FormBox>
           <Form action='https://formsubmit.co/carlos@lberto.eti.br' method='POST' encType='multipart/form-data' autoComplete='false'>
             <Heading>E-Mail</Heading>
-            <Input name='name' type='text' placeholder=' ' autoComplete='false' />
+            <Input name='name' type='text' placeholder=' ' autoComplete='false' value={name} onChange={e => setName(e.target.value)} onKeyUp={validaFormulario} />
             <Label htmlFor='name'>Nome</Label>
             <InputWrap>
               <EmailArea>
                 <Indicator id='indicator' />
-                <Input name='email' type='email' className='email' placeholder=' ' autoComplete='nofill' onChange={e => validaEmail(e.target.value)} />
+                <Input name='email' type='email' className='email' placeholder=' ' autoComplete='nofill' onChange={e => validaEmail(e.target.value)} onKeyUp={validaFormulario} />
                 <Label htmlFor='email'>Email</Label>
               </EmailArea>
               <TelArea>
-                <Input name='tel' type='tel' placeholder=' ' autoComplete='nofill' maxLength='15' value={tel} onChange={e => mascaraTel(e.target.value)} />
+                <Input name='tel' type='tel' placeholder=' ' autoComplete='nofill' maxLength='15' value={tel} onChange={e => mascaraTel(e.target.value)} onKeyUp={validaFormulario} />
                 <Label htmlFor='tel'>Telefone</Label>
               </TelArea>
             </InputWrap>
-            <Input name='_subject' type='text' placeholder=' ' autoComplete='nofill' />
+            <Input name='_subject' type='text' placeholder=' ' autoComplete='nofill' value={subject} onChange={e => setSubject(e.target.value)} onKeyUp={validaFormulario} />
             <Label htmlFor='_subject'>Projeto</Label>
-            <TextArea name='message' placeholder=' ' autoComplete='nofill'></TextArea>
+            <TextArea name='message' placeholder=' ' autoComplete='nofill' value={message} onChange={e => setMessage(e.target.value)} onKeyUp={validaFormulario}></TextArea>
             <Label htmlFor='message'>Mensagem</Label>
             <BtnWrap>
               <Reset type='reset' value='Limpar' onClick={removeValores} />
-              <Submit type='submit' value='Enviar' />
+              <Submit type='submit' value='Enviar' id='send' className='disabled' disabled />
             </BtnWrap>
             <input type='hidden' name='_template' value='basic' />
             <input type='hidden' name='_captcha' value='false' />
