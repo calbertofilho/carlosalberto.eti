@@ -4,13 +4,9 @@ import { Section, EmphasisBox, Emphasis, Paragraph, ContentBox, ContactInfoBox, 
 
 
 const ContactSection = () => {
-  const removeValores = () => {
-    indicator.classList.remove('valid');
-    indicator.classList.remove('invalid');
-    setTel('');
-  };
-
   const [tel, setTel] = React.useState('');
+  let indicator;
+
   const mascaraTel = (phone) => {
     phone = phone.replace(/\D/g, '');
     phone = phone.replace(/^(\d{2})(\d)/g,'($1) $2');
@@ -18,10 +14,17 @@ const ContactSection = () => {
     setTel(phone);
   };
 
-  const indicator = document.getElementById('indicator');
+  const removeValores = () => {
+    indicator = document.getElementById('indicator');
+    indicator.classList.remove('valid');
+    indicator.classList.remove('invalid');
+    setTel('');
+  };
 
   const validaEmail = (email) => {
+    indicator = document.getElementById('indicator');
     const pattern = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})$/; // eslint-disable-line
+
     if (pattern.test(email)) {
       indicator.classList.add('valid');
       indicator.classList.remove('invalid');
@@ -75,9 +78,9 @@ const ContactSection = () => {
             <Label htmlFor='name'>Nome</Label>
             <InputWrap>
               <EmailArea>
+                <Indicator id='indicator' />
                 <Input name='email' type='email' className='email' placeholder=' ' autoComplete='nofill' onChange={e => validaEmail(e.target.value)} />
                 <Label htmlFor='email'>Email</Label>
-                <Indicator id='indicator' />
               </EmailArea>
               <TelArea>
                 <Input name='tel' type='tel' placeholder=' ' autoComplete='nofill' maxLength='15' value={tel} onChange={e => mascaraTel(e.target.value)} />
