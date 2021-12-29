@@ -26,7 +26,7 @@ export const Section = styled.section`
 export const EmphasisBox = styled.div`
   width: 100%;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 `;
 
 export const Emphasis = styled.span`
@@ -37,7 +37,7 @@ export const Emphasis = styled.span`
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 
   @media screen and (max-width: 480px) {
     font-size: 16px;
@@ -54,11 +54,19 @@ export const ContentBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const ContactInfoBox = styled.div`
   min-width: 40%;
   align-self: flex-start;
+
+  @media screen and (max-width: 768px) {
+    align-self: center;
+  }
 `;
 
 export const Heading = styled.h1`
@@ -112,19 +120,31 @@ export const InputWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  min-width: 100%;
   gap: 24px;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 
 export const EmailArea = styled.div`
   width: 70%;
   position: relative;
   display: grid;
+
+  @media screen and (max-width: 480px) {
+    min-width: 100%;
+  }
 `;
 
 export const TelArea = styled.div`
   width: 30%;
   display: grid;
+
+  @media screen and (max-width: 480px) {
+    min-width: 100%;
+  }
 `;
 
 export const commonInputStyle = css`
@@ -216,6 +236,10 @@ export const BtnWrap = styled.div`
   align-items: center;
   justify-content: right;
   gap: 24px;
+
+  @media screen and (max-width: 320px) {
+    flex-direction: column;
+  }
 `;
 
 export const commonButtonStyle = css`
