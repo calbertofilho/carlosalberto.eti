@@ -1,5 +1,6 @@
 import React from 'react'
-import { Card, Heading, ImgDesign, Paragraph, Section, Emphasis, Wrapper } from './elements';
+import { MdHorizontalRule } from "react-icons/md";
+import { Card, Heading, ImgDesign, EmphasisParagraph, Paragraph, Section, EmphasisBox, Emphasis, ContentBox } from './elements';
 import Image1 from '../../../../assets/images/portfolio1.jpg';
 import Image2 from '../../../../assets/images/portfolio2.jpg';
 import Image3 from '../../../../assets/images/portfolio3.jpg';
@@ -10,8 +11,13 @@ import Image6 from '../../../../assets/images/portfolio6.jpg';
 const PortfolioSection = () => {
   return (
     <Section id='portfolio'>
-      <Emphasis>Portfolio</Emphasis>
-      <Wrapper>
+      <EmphasisBox>
+        <Emphasis>Portfolio</Emphasis>
+        <EmphasisParagraph>
+          <MdHorizontalRule /> Veja um pouco dos meus trabalhos já realizados. <MdHorizontalRule />
+        </EmphasisParagraph>
+      </EmphasisBox>
+      <ContentBox>
         <Card>
           <ImgDesign src={Image1} alt='Portfolio Image 1' />
           <Heading>Digital Pioneers in Webdesign</Heading>
@@ -42,7 +48,7 @@ const PortfolioSection = () => {
           <Heading>Kuon Yagi</Heading>
           <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>
         </Card>
-      </Wrapper>
+      </ContentBox>
     </Section>
   )
 }

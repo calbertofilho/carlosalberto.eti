@@ -22,36 +22,48 @@ export const Section = styled.section`
   }
 
   @media screen and (max-width: 768px) {
-    height: 1100px;
+    height: 1800px;
   }
 
-  @media screen and (max-width: 480px) {
-    height: 1300px;
+  @media screen and (max-width: 580px) {
+    height: 1900px;
   }
+`;
+
+export const EmphasisBox = styled.div`
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
 `;
 
 export const Emphasis = styled.span`
   color: #01bf71;
   display: block;
-  font-size: 2.5rem;
-  line-height: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 0.1rem;
+  font-size: 30px;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 4rem;
+  margin-bottom: 12px;
 
   @media screen and (max-width: 480px) {
-    font-size: 2rem;
+    font-size: 16px;
   }
 `;
 
-export const Wrapper = styled.div`
+export const EmphasisParagraph = styled.p`
+  color: #fff;
+  font-size: 16px;
+`;
+
+export const ContentBox = styled.div`
   max-width: 1000px;
   padding: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   grid-gap: 16px;
+  margin-bottom: 40px;
 
   @media screen and (max-width: 1000px) {
     grid-template-columns: 1fr 1fr;

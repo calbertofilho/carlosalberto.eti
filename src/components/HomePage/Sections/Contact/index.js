@@ -1,6 +1,6 @@
 import React from 'react';
 import { MdEmail, MdLocationOn, MdPhone, MdHorizontalRule } from "react-icons/md";
-import { Section, EmphasisBox, Emphasis, Paragraph, ContentBox, ContactInfoBox, InfoBox, Heading, Icon, Text, InfoTitle, Info, FormBox, Form, Label, Input, InputWrap, EmailArea, TelArea, TextArea, BtnWrap, Submit, Reset, Indicator } from './elements';
+import { Section, EmphasisBox, Emphasis, EmphasisParagraph, ContentBox, ContactInfoBox, InfoBox, Heading, Icon, Text, InfoTitle, Info, FormBox, Form, Label, Input, InputWrap, EmailArea, TelArea, TextArea, BtnWrap, Submit, Reset, Indicator } from './elements';
 
 
 const ContactSection = () => {
@@ -66,9 +66,9 @@ const ContactSection = () => {
     <Section id='contact'>
       <EmphasisBox>
         <Emphasis>Contato</Emphasis>
-        <Paragraph>
+        <EmphasisParagraph>
           <MdHorizontalRule /> Fique a vontade para entrar em contato comigo e solicitar um orçamento para seu projeto. <MdHorizontalRule />
-        </Paragraph>
+        </EmphasisParagraph>
       </EmphasisBox>
       <ContentBox>
         <ContactInfoBox>
