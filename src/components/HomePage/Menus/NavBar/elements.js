@@ -45,15 +45,44 @@ export const NavBarLogo = styled(LinkScroll)`
 
   @media screen and (max-width: 400px) {
     white-space: normal;
+    font-size: 1.25rem;
+  }
+
+  @media screen and (max-width: 350px) {
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 300px) {
+    font-size: 0.75rem;
+  }
+
+  @media screen and (max-width: 250px) {
+    font-size: 0.5rem;
   }
 `;
 
 export const NavBarLogoEmphasis = styled.span`
-  align-self: flex-start;
+  align-self: center;
   font-family: 'Reality Hyper', sans-serif;
   font-weight: bold;
   font-size: 4.4rem;
   margin-left: 12px;
+
+  @media screen and (max-width: 400px) {
+    font-size: 4rem;
+  }
+
+  @media screen and (max-width: 350px) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: 300px) {
+    font-size: 2.2rem;
+  }
+
+  @media screen and (max-width: 250px) {
+    font-size: 1.8rem;
+  }
 `;
 
 export const HamburgerIcon = styled.div`
