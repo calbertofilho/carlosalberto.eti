@@ -102,9 +102,9 @@ const ContactSection = () => {
             <Label htmlFor='name'>Nome</Label>
             <InputWrap>
               <EmailArea>
-                <Indicator id='indicator' />
                 <Input name='email' type='email' className='email' placeholder=' ' autoComplete='nofill' onChange={e => validaEmail(e.target.value)} onKeyUp={validaFormulario} />
                 <Label htmlFor='email'>Email</Label>
+                <Indicator id='indicator' />
               </EmailArea>
               <TelArea>
                 <Input name='tel' type='tel' placeholder=' ' autoComplete='nofill' maxLength='15' value={tel} onChange={e => mascaraTel(e.target.value)} onKeyUp={validaFormulario} />

@@ -234,14 +234,16 @@ export const commonButtonStyle = css`
   text-decoration: none;
 
   &:hover {
-    background: #fff;
     color: #010606;
+    background: #fff;
+    border: solid 1px #fff;
   }
 `;
 
 export const Submit = styled.input`
   ${commonButtonStyle};
   background: #01bf71;
+  border: solid 1px #01bf71;
 
   &.disabled {
     display: block !important;
@@ -255,4 +257,5 @@ export const Submit = styled.input`
 export const Reset = styled.input`
   ${commonButtonStyle};
   background: #f04135;
+  border: solid 1px #f04135;
 `;
