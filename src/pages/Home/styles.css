@@ -1,0 +1,23 @@
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  user-select: none;
+}
+
+::-moz-selection { /* Code for Firefox */
+  background: #01bf71;
+  color: #010606; 
+}
+
+::selection {
+  background: #01bf71;
+  color: #010606; 
+}

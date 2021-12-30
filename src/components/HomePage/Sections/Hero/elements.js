@@ -38,7 +38,7 @@ export const Heading = styled.h1`
   font-size: 3rem;
   --text-width: 377.34px;
   --text-reflect: -25px;
-  /* animation: typing 8s steps(14) infinite; */
+  animation: typing 8s steps(14) infinite;
   white-space: nowrap;
   overflow: hidden;
   pointer-events: none;

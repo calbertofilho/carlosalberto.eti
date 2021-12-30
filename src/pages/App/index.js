@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import GlobalStyles from './styles';
+import './styles.css';
 
 const AppPage = () => {
   return (
@@ -13,7 +13,6 @@ const AppPage = () => {
         <meta name="description" content="Especialista em Tecnologia da Informação" />
         <title>NoAzul App [Gerenciador Financeiro Pessoal]</title>
       </Helmet>
-      <GlobalStyles />
       <>
         <h1>NoAzul App</h1>
       </>

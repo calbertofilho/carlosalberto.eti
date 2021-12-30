@@ -38,7 +38,7 @@ export const NavBarLogo = styled(LinkScroll)`
   align-items: center;
   margin-left: 24px;
   white-space: nowrap;
-  font-family: 'Reality Hyper', sans-serif;
+  font-family: 'Reality Hyper TTF', sans-serif;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
@@ -63,7 +63,7 @@ export const NavBarLogo = styled(LinkScroll)`
 
 export const NavBarLogoEmphasis = styled.span`
   align-self: center;
-  font-family: 'Reality Hyper', sans-serif;
+  font-family: 'Reality Hyper TTF', sans-serif;
   font-weight: bold;
   font-size: 4.4rem;
   margin-left: 12px;
