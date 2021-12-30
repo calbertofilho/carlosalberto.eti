@@ -12,12 +12,8 @@ body {
   user-select: none;
 }
 
-::-moz-selection { /* Code for Firefox */
-  background: #01bf71;
-  color: #010606; 
-}
-
-::selection {
+::selection,
+::-moz-selection {
   background: #01bf71;
   color: #010606; 
 }

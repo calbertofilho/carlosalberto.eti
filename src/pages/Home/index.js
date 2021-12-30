@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { MovieBackground, SideBar, NavBar, HeroSection, AboutSection, PortfolioSection, DownloadsSection, ContactSection  } from '../../components/HomePage';
+import { MovieBackground, SideBar, NavBar, HeroSection, AboutSection, PortfolioSection, DownloadsSection, ContactSection, FootNote  } from '../../components/HomePage';
+import { Content, Footer, Header, Main } from './elements';
 import './styles.css';
 
 const HomePage = () => {
@@ -20,16 +21,23 @@ const HomePage = () => {
         <meta name="description" content="Especialista em Tecnologia da Informação" />
         <title>Carlos Alberto ETI</title>
       </Helmet>
-      <>
-        <MovieBackground />
-        <SideBar isOpen={isOpen} toggle={toggle} />
-        <NavBar toggle={toggle} />
-        <HeroSection />
-        <AboutSection />
-        <PortfolioSection />
-        <DownloadsSection />
-        <ContactSection />
-      </>
+      <Content>
+        <Header>
+          <SideBar isOpen={isOpen} toggle={toggle} />
+          <NavBar toggle={toggle} />
+        </Header>
+        <Main>
+          <MovieBackground />
+          <HeroSection />
+          <AboutSection />
+          <PortfolioSection />
+          <DownloadsSection />
+          <ContactSection />
+        </Main>
+        <Footer>
+          <FootNote />
+        </Footer>
+      </Content>
     </HelmetProvider>
   )
 }
