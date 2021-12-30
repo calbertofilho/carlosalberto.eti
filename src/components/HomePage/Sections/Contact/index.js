@@ -1,6 +1,6 @@
 import React from 'react';
 import { MdEmail, MdLocationOn, MdPhone, MdHorizontalRule } from "react-icons/md";
-import { Section, EmphasisBox, Emphasis, EmphasisParagraph, ContentBox, ContactInfoBox, InfoBox, Heading, Icon, Text, InfoTitle, Info, FormBox, Form, Label, Input, InputWrap, EmailArea, TelArea, TextArea, BtnWrap, Submit, Reset, Indicator } from './elements';
+import { Section, EmphasisBox, Emphasis, EmphasisParagraph, ContentBox, ContactInfoBox, InfoBox, Heading, Icon, Text, InfoTitle, Info, FormBox, Form, Label, Input, InputWrap, EmailArea, TelArea, TextArea, BtnWrap, Submit, Reset, Indicator, Required } from './elements';
 
 
 const ContactSection = () => {
@@ -99,23 +99,24 @@ const ContactSection = () => {
           <Form action='https://formsubmit.co/carlos@lberto.eti.br' method='POST' encType='multipart/form-data' autoComplete='false'>
             <Heading>E-Mail</Heading>
             <Input name='name' type='text' placeholder=' ' autoComplete='false' value={name} onChange={e => setName(e.target.value)} onKeyUp={validaFormulario} />
-            <Label htmlFor='name'>Nome</Label>
+            <Label htmlFor='name'>Nome<Required children=' *' /></Label>
             <InputWrap>
               <EmailArea>
                 <Input name='email' type='email' className='email' placeholder=' ' autoComplete='nofill' onChange={e => validaEmail(e.target.value)} onKeyUp={validaFormulario} />
-                <Label htmlFor='email'>Email</Label>
+                <Label htmlFor='email'>Email<Required children=' *' /></Label>
                 <Indicator id='indicator' />
               </EmailArea>
               <TelArea>
                 <Input name='tel' type='tel' placeholder=' ' autoComplete='nofill' maxLength='15' value={tel} onChange={e => mascaraTel(e.target.value)} onKeyUp={validaFormulario} />
-                <Label htmlFor='tel'>Telefone</Label>
+                <Label htmlFor='tel'>Telefone<Required children=' *' /></Label>
               </TelArea>
             </InputWrap>
             <Input name='_subject' type='text' placeholder=' ' autoComplete='nofill' value={subject} onChange={e => setSubject(e.target.value)} onKeyUp={validaFormulario} />
-            <Label htmlFor='_subject'>Projeto</Label>
+            <Label htmlFor='_subject'>Projeto<Required children=' *' /></Label>
             <TextArea name='message' placeholder=' ' autoComplete='nofill' value={message} onChange={e => setMessage(e.target.value)} onKeyUp={validaFormulario}></TextArea>
-            <Label htmlFor='message'>Mensagem</Label>
+            <Label htmlFor='message'>Mensagem<Required children=' *' /></Label>
             <BtnWrap>
+              <Required children='* preenchimento obrigatório' />
               <Reset type='reset' value='Limpar' onClick={removeValores} />
               <Submit type='submit' value='Enviar' id='send' className='disabled' disabled />
             </BtnWrap>

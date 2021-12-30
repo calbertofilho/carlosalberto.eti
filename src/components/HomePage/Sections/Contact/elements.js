@@ -188,6 +188,10 @@ export const Label = styled.label`
                   color 0.3s ease;
 `;
 
+export const Required = styled.span`
+  color: red;
+`;
+
 export const Input = styled.input`
   ${commonInputStyle};
 
