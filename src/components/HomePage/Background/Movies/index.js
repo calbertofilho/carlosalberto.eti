@@ -1,7 +1,8 @@
 import React from 'react'
 import { Background, VideoMovie } from './elements';
 import Video1 from '../../../../assets/videos/hero-page-1080p.mp4';
-import Video2 from '../../../../assets/videos/production-1080p.mp4';
+import Video2 from '../../../../assets/videos/downloads-page-1080p.mp4';
+// import Video2 from '../../../../assets/videos/matrix-1080p.mp4';
 
 const MovieBackground = () => {
   const sectionVisibleIs = (section) => {
@@ -28,10 +29,14 @@ const MovieBackground = () => {
       var filenameVideo1 = sourceVideo1.substring(sourceVideo1.lastIndexOf("/") + 1, sourceVideo1.length);
       var filenameVideo2 = sourceVideo2.substring(sourceVideo2.lastIndexOf("/") + 1, sourceVideo2.length);
 
-      if (sectionVisibleIs('home') && (filenameCurrentVideo !== filenameVideo1))
+      if (sectionVisibleIs('home') && (filenameCurrentVideo !== filenameVideo1)) {
         document.getElementById('video').src = `${Video1}`;
-      else if (!sectionVisibleIs('home') && (filenameCurrentVideo !== filenameVideo2))
+        document.getElementById('video').style.filter = 'hue-rotate(100deg)';
+      }
+      else if (!sectionVisibleIs('home') && (filenameCurrentVideo !== filenameVideo2)) {
         document.getElementById('video').src = `${Video2}`;
+        document.getElementById('video').style.filter = 'hue-rotate(0deg)';
+      }
     });
   })
 
