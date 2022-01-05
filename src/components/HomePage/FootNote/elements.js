@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { IoLogoGithub, IoLogoVercel, IoLogoInstagram, IoLogoTwitter, IoLogoYoutube } from 'react-icons/io5';
 import { SiGmail } from 'react-icons/si';
-import { RiGlobalFill } from "react-icons/ri";
+import { RiGlobalFill } from 'react-icons/ri';
 import { Link as LinkScroll } from 'react-scroll';
 
 export const Content = styled.div`
@@ -20,38 +20,98 @@ export const InfoWrap = styled.div`
 `;
 
 export const SocialMedia = styled.div`
-  align-self: flex-start;
-  color: #fff;
+  position: relative;
+  display: block;
   margin-bottom: 40px;
-  font-size: 36px;
+`;
+
+const Links = css`
+  cursor: pointer;
+  color: #bdffe4;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  margin: 8px;
+  overflow: hidden;
+  box-shadow: -4px -4px 10px 0 rgba(0, 0, 0, 0.2);
+  filter: blur(0.5px);
+  transition: 0.5s all ease;
+
+  &:hover {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    filter: blur(0);
+    transform: scale(1.1);
+    box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.5);
+    width: 25px;
+    height: 100%;
+    transform: skewX(45deg) translateX(150px);
+    transition: 1s;
+  }
+
+  &:hover:before {
+    transform: skewX(45deg) translateX(-150px);
+  }
+`;
+
+export const Link = styled.a`
+  ${Links}
+`;
+
+export const LinkScrl = styled(LinkScroll)`
+  ${Links}
+`;
+
+const Icons = css`
+  font-size: 28px;
 `;
 
 export const Github = styled(IoLogoGithub)`
-  margin: 8px;
+  ${Icons}
 `;
 
 export const Vercel = styled(IoLogoVercel)`
-  margin: 8px;
+  ${Icons}
 `;
 
 export const Instagram = styled(IoLogoInstagram)`
-  margin: 8px;
+  ${Icons}
 `;
 
 export const Twitter = styled(IoLogoTwitter)`
-  margin: 8px;
+  ${Icons}
 `;
 
 export const Youtube = styled(IoLogoYoutube)`
-  margin: 8px;
+  ${Icons}
 `;
 
 export const Gmail = styled(SiGmail)`
-  margin: 8px;
+  ${Icons}
 `;
 
 export const Site = styled(RiGlobalFill)`
-  margin: 8px;
+  ${Icons}
 `;
 
 export const Paragraph = styled.p`
