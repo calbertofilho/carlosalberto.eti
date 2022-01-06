@@ -21,19 +21,19 @@ export const InfoWrap = styled.div`
 
 export const SocialMedia = styled.div`
   position: relative;
-  display: block;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 12px;
   margin-bottom: 40px;
 `;
 
 const Links = css`
   cursor: pointer;
   color: #bdffe4;
-  display: inline-block;
+  position: relative;
+  display: table-cell;
   vertical-align: middle;
   text-align: center;
-  position: relative;
-  top: 0; bottom: 0;
-  left: 0; right: 0;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -41,7 +41,6 @@ const Links = css`
   border-radius: 10px;
   width: 40px;
   height: 40px;
-  margin: 8px;
   overflow: hidden;
   box-shadow: -4px -4px 10px 0 rgba(0, 0, 0, 0.2);
   filter: blur(0.5px);
