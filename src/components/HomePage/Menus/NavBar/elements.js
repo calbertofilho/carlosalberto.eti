@@ -114,22 +114,40 @@ export const NavBarItem = styled.li`
 
 export const NavBarLink = styled(LinkScroll)`
   color: #fff;
+  position: relative;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  transition: color 0.3s ease-in-out;
 
   &:hover {
-    border-bottom: 3px solid #01bf71;
-    padding-top: 3px;
     color: #01bf71;
   }
 
   &.active {
     border-bottom: 3px solid #01bf71;
     padding-top: 3px;
+    color: #01bf71;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: #01bf71;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover:after {
+    left: 0;
+    width: 100%;
   }
 `;
 
