@@ -17,7 +17,7 @@ export const Content = styled.div`
 
 export const InfoWrap = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: left;
   height: 100%;
   width: 50%;
@@ -32,6 +32,7 @@ export const InfoWrap = styled.div`
     width: 100%;
     padding: 12px;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
 `;
@@ -39,10 +40,7 @@ export const InfoWrap = styled.div`
 export const SocialMedia = styled.div`
   position: relative;
   margin-bottom: 40px;
-
-  @media screen and (max-width: 400px) {
-    justify-content: center;
-  }
+  text-align: center;
 `;
 
 const Links = css`
@@ -50,8 +48,6 @@ const Links = css`
   color: #bdffe4;
   position: relative;
   display: inline-block;
-  vertical-align: middle;
-  text-align: center;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -59,7 +55,7 @@ const Links = css`
   border-radius: 10px;
   overflow: hidden;
   padding: 6px;
-  margin: 0 6px;
+  margin: 0 6px 12px 6px;
   box-shadow: -4px -4px 10px 0 rgba(0, 0, 0, 0.2);
   filter: blur(0.5px);
   transition: 0.5s all ease;
